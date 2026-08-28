@@ -51,10 +51,7 @@ def find_above_average_students(students):
     pass
     scores = [student["score"] for student in students]
     average = sum(scores) / len(scores)
-    above_average_students = [student["name"] for student in students if student["score"] >= average]
-
-
-   
+    above_average_students = [student["name"] for student in students if student["score"] >= average]  
 
     
     return average, above_average_students
