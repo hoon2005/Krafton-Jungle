@@ -145,6 +145,9 @@ def combinations(n: int, k: int) -> list:
         #     result.append(...)
         #     return
         pass  
+        if len(current_combination) == k:
+                    result.append(list(current_combination))
+                    return
 
         # ──────────────────────────────────────────────────────────────────
         # [Level 2] 가지치기 반복문
@@ -155,6 +158,12 @@ def combinations(n: int, k: int) -> list:
         #
         # TODO(Level 2): 아래 한 줄을 작성하세요.
         pass
+        for num in range(start, n + 1):              
+              current_combination.append(num)
+              backtrack(num + 1, current_combination)
+              current_combination.pop()
+
+
 
             # ──────────────────────────────────────────────────────────────
             # [Level 3] 백트래킹 3단계

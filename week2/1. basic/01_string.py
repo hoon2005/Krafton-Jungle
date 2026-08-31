@@ -40,30 +40,31 @@ def is_palindrome(s):
 
     # TODO: 정제된 문자열이 회문인지 확인하세요
     # 방법1: 문자열을 뒤집어서 비교 ([::-1] 사용)
-    # cleaned = "".join([char.lower() for char in s if char.isalnum()])    
-  
-    # result = s[::-1]
-    # if s == result:
-    #     return True
-    # else:
-    #     return False
+
+    cleaned = "".join([char.lower() for char in s if char.isalnum()])    
+    
+    result = cleaned[::-1]
+    if cleaned == result:
+        return True
+    else:
+        return False
     
     
     
     # 방법2: 양 끝 인덱스를 이용한 투 포인터 방식
-    cleaned = "".join([char.lower() for char in s if char.isalnum()])
+    # cleaned = "".join([char.lower() for char in s if char.isalnum()])
 
-    left = 0
-    right = len(s) - 1
+    # left = 0
+    # right = len(cleaned) - 1
 
-    while left < right:
-        if s[left] != s[right]:
-            return False
+    # while left < right:
+    #     if cleaned[left] != cleaned[right]:
+    #         return False
 
-        left += 1
-        right -= 1
+    #     left += 1
+    #     right -= 1
 
-    return True
+    # return True
     
     
     
