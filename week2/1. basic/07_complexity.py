@@ -69,7 +69,7 @@ def find_duplicates_sorting(nums):
     # i와 i+1 원소가 같고, duplicates에 없으면 추가
     pass
     
-    return duplicates
+    
 
 def find_duplicates_hash(nums):
     """

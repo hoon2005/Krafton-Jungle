@@ -144,10 +144,11 @@ def combinations(n: int, k: int) -> list:
         # if len(current_combination) == ...:
         #     result.append(...)
         #     return
-        pass  
+        pass
         if len(current_combination) == k:
-                    result.append(list(current_combination))
-                    return
+            result.append(list(current_combination))
+            return
+        
 
         # ──────────────────────────────────────────────────────────────────
         # [Level 2] 가지치기 반복문
@@ -158,10 +159,11 @@ def combinations(n: int, k: int) -> list:
         #
         # TODO(Level 2): 아래 한 줄을 작성하세요.
         pass
-        for num in range(start, n + 1):              
-              current_combination.append(num)
-              backtrack(num + 1, current_combination)
-              current_combination.pop()
+        for num in range(start, n + 1):
+            current_combination.append(num)
+            backtrack(num + 1, current_combination)
+            current_combination.pop()
+        
 
 
 

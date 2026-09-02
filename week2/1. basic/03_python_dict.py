@@ -49,11 +49,17 @@ def find_above_average_students(students):
     
     # TODO: 평균 이상인 학생들의 이름을 리스트로 추출하세요
     pass
-    scores = [student["score"] for student in students]
-    average = sum(scores) / len(scores)
-    above_average_students = [student["name"] for student in students if student["score"] >= average]  
+    scores = []
+    for student in students:
+        scores.append(student["score"])
 
-    
+    average = sum(scores) / len(scores)
+
+    above_average_students = []
+    for student in students:
+        if student["score"] >= average:
+            above_average_students.append(student["name"])
+
     return average, above_average_students
 
 # 테스트 케이스
