@@ -24,13 +24,17 @@
   4   5
 
 전위: [1, 2, 4, 5, 3]
-중위: [4, 2, 5, 1, 3]
+중위: [4, 2, 5, 1, 3]ㅣ스템
 후위: [4, 5, 2, 3, 1]
 
 힌트:
 - 재귀로 간단히 구현 가능
 - 순회 순서만 다름
 """
+
+from logging import root
+from unittest import result
+
 
 class TreeNode:
     """이진 트리 노드"""
@@ -45,15 +49,23 @@ def preorder(root):
     
     # TODO: root가 None이면 빈 리스트 반환
     pass
+    if root is None:
+        return []
     
     # TODO: 루트 값 추가
-    pass
+    pass  
+    result.append(root.value)
+
     
     # TODO: 왼쪽 서브트리 순회
     pass
     
+    result.extend(preorder(root.left))    
+    
     # TODO: 오른쪽 서브트리 순회
     pass
+    
+    result.extend(preorder(root.right))
     
     return result
 
@@ -62,16 +74,18 @@ def inorder(root):
     result = []
     
     # TODO: root가 None이면 빈 리스트 반환
-    pass
+    
+    if root is None:
+        return []
     
     # TODO: 왼쪽 서브트리 순회
-    pass
-    
+    result.extend(inorder(root.left))    
+
     # TODO: 루트 값 추가
-    pass
+    result.append(root.value)
     
-    # TODO: 오른쪽 서브트리 순회
-    pass
+    # # TODO: 오른쪽 서브트리 순회
+    result.extend(inorder(root.right))
     
     return result
 
@@ -81,15 +95,17 @@ def postorder(root):
     
     # TODO: root가 None이면 빈 리스트 반환
     pass
+    if root is None:
+        return []
     
     # TODO: 왼쪽 서브트리 순회
-    pass
+    result.extend(postorder(root.left))
     
     # TODO: 오른쪽 서브트리 순회
-    pass
+    result.extend(postorder(root.right))
     
     # TODO: 루트 값 추가
-    pass
+    result.append(root.value)
     
     return result
 
