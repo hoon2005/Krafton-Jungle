@@ -42,35 +42,35 @@ def is_palindrome(s):
     # TODO: 정제된 문자열이 회문인지 확인하세요
     # 방법1: 문자열을 뒤집어서 비교 ([::-1] 사용)
 
-    # cleaned = ""  
-    # for char in s:
-    #     if char.isalnum():
-    #         cleaned += char.lower()
+    cleaned = ""  
+    for char in s:
+        if char.isalnum():
+            cleaned += char.lower()
 
-    # return cleaned == cleaned[::-1]
     
+    return cleaned ==  cleaned[::-1]
 
     
     
     
     # 방법2: 양 끝 인덱스를 이용한 투 포인터 방식
-    cleaned = ""
-    for char in s:        
-        if char.isalnum():
-            cleaned += char.lower()
+    # cleaned = ""
+    # for char in s:        
+    #     if char.isalnum():
+    #         cleaned += char.lower()
 
 
-    left = 0
-    right = len(cleaned) - 1
+    # left = 0
+    # right = len(cleaned) - 1
 
-    while left < right:
-        if cleaned[left] != cleaned[right]:
-            return False
+    # while left < right:
+    #     if cleaned[left] != cleaned[right]:
+    #         return False
 
-        left += 1
-        right -= 1
+    #     left += 1
+    #     right -= 1
 
-    return True
+    # return True
     
     
     
